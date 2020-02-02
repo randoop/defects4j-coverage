@@ -1,0 +1,16 @@
+jobs:
+- job: test_randoop_coverage
+  pool:
+    vmImage: 'ubuntu-16.04'
+  container: mdernst/randoop-ubuntu-jdkany-coverage:latest
+  timeoutInMinutes: 120
+  steps:
+  - checkout: self
+    fetchDepth: 25
+  - checkout: https://github.com/rjust/defects4j.git
+    fetchDepth: 25
+    path: defects4j
+  - bash: env | sort
+    displayName: environment
+  - bash: cd ../defects4j && ./framework/test/test_randoop_coverage.sh
+    displayName: test_randoop_coverage.sh
