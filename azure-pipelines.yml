@@ -7,7 +7,7 @@ jobs:
   steps:
   - checkout: self
     fetchDepth: 25
-  - checkout: https://github.com/rjust/defects4j.git
+  - checkout: github://rjust/defects4j
     fetchDepth: 25
     path: defects4j
   - bash: env | sort
