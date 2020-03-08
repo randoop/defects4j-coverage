@@ -11,7 +11,7 @@ jobs:
     displayName: checkout-defects4j
   - bash: env | sort
     displayName: environment
-  - bash: cd ../defects4j && sed 's|-q https://github.com/randoop/randoop.git|-q -b methodGenListASM https://github.com/randoop/randoop.git|g' framework/test/test_randoop_coverage.sh
+  - bash: cd ../defects4j && sed -i 's|-q https://github.com/randoop/randoop.git|-q -b methodGenListASM https://github.com/randoop/randoop.git|g' framework/test/test_randoop_coverage.sh
     displayName: clone-methodListGenASM
   - bash: cd ../defects4j && ./framework/test/test_randoop_coverage.sh
     displayName: test_randoop_coverage.sh
