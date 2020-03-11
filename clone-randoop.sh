@@ -10,4 +10,4 @@ else
   git -C /tmp clone --depth 1 -q https://github.com/plume-lib/plume-scripts.git
 fi
 
-/tmp/plume-scripts/git-clone-related randoop randop /tmp/randoop
+/tmp/plume-scripts/git-clone-related randoop randoop /tmp/randoop
