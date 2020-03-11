@@ -7,8 +7,8 @@ jobs:
   steps:
   - checkout: self
     fetchDepth: 25
-  - bash: cd .. && git clone https://github.com/rjust/defects4j.git
-    displayName: checkout-defects4j
+  - bash: ./clone-defects4j.sh
+    displayName: clone-defects4j.sh
   - bash: env | sort
     displayName: environment
   - bash: cd ../defects4j && ./framework/test/test_randoop_coverage.sh
