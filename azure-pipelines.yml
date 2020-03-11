@@ -7,6 +7,8 @@ jobs:
   steps:
   - checkout: self
     fetchDepth: 25
+  - bash: ./clone-randoop.sh
+    displayName: clone-randoop.sh
   - bash: ./clone-defects4j.sh
     displayName: clone-defects4j.sh
   - bash: env | sort
